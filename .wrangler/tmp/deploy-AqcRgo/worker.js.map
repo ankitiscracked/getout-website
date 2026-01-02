@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../src/worker.ts"],
+  "sourceRoot": "/Users/aaa/getout/website/.wrangler/tmp/deploy-AqcRgo",
+  "sourcesContent": ["interface Env {\n  ASSETS: Fetcher;\n}\n\nexport default {\n  async fetch(request: Request, env: Env): Promise<Response> {\n    const url = new URL(request.url);\n    const assetResponse = await env.ASSETS.fetch(request);\n\n    if (assetResponse.status !== 404) {\n      return assetResponse;\n    }\n\n    // Preserve 404s for real files (e.g. /favicon.ico, /assets/app.js)\n    if (url.pathname.includes(\".\")) {\n      return assetResponse;\n    }\n\n    const indexUrl = new URL(\"/index.html\", url);\n    return env.ASSETS.fetch(new Request(indexUrl, request));\n  },\n};\n"],
+  "mappings": ";AAIA,IAAO,iBAAQ;AAAA,EACb,MAAM,MAAM,SAAkB,KAA6B;AACzD,UAAM,MAAM,IAAI,IAAI,QAAQ,GAAG;AAC/B,UAAM,gBAAgB,MAAM,IAAI,OAAO,MAAM,OAAO;AAEpD,QAAI,cAAc,WAAW,KAAK;AAChC,aAAO;AAAA,IACT;AAGA,QAAI,IAAI,SAAS,SAAS,GAAG,GAAG;AAC9B,aAAO;AAAA,IACT;AAEA,UAAM,WAAW,IAAI,IAAI,eAAe,GAAG;AAC3C,WAAO,IAAI,OAAO,MAAM,IAAI,QAAQ,UAAU,OAAO,CAAC;AAAA,EACxD;AACF;",
+  "names": []
+}

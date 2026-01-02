@@ -1,24 +1,15 @@
 {
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "getout-website",
-  "type": "javascript",
-  "main": "dist/index.js",
-  "compatibility_date": "2024-11-12",
-  // Update this with your domain
-  "env": {
-    "production": {
-      "routes": [
-        {
-          "pattern": "example.com/*",
-          "zone_name": "example.com"
-        }
-      ]
-    }
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-01-01",
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
   },
-  "build": {
-    "upload": [
-      {
-        "format": "service-worker"
-      }
-    ]
+  "vars": {
+    "R2_BUCKET": "getout-releases",
+    "R2_ACCOUNT_ID": "9cadae6cf1a3fa582564337a82bb3861"
   }
 }
