@@ -15,8 +15,7 @@ export default function App() {
 
   // The DMG file URL - replace with your actual storage location
   // Options: GitHub Releases, Cloudflare R2, or any public CDN
-  const DMG_URL =
-    "https://github.com/yourusername/getout/releases/download/v1.0.0/getout.dmg";
+  const DMG_URL = "/download/releases/Getout-0.1.0-macos.app.zip";
 
   // Claude Monet - Water Lilies (1906) - Public Domain
   const monetPainting =
@@ -25,7 +24,7 @@ export default function App() {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = DMG_URL;
-    link.download = "getout.dmg";
+    link.download = "Getout-0.1.0-macos.app.zip";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
