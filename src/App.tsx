@@ -1,4 +1,4 @@
-import { Download, Zap, Shield, Clock, Layers } from "lucide-react";
+import { Download, Command, Link, Bot, Keyboard } from "lucide-react";
 import Logo from "./Logo";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
@@ -101,8 +101,8 @@ export default function App() {
               for Professionals
             </h1>
             <p className="mt-4 text-lg text-stone-600 text-center max-w-xl mx-auto tracking-tight">
-              Streamline your workflow with powerful utilities for file conversion,
-              quick actions, and automation—all in one lightweight app.
+              One hotkey. Everything you need. Type a command—your notes, issues,
+              messages, calendar, all right there.
             </p>
             <button
               onClick={handleDownload}
@@ -160,11 +160,12 @@ export default function App() {
                 </div>
                 <img
                   src="/product-image-1.png"
-                  alt="Quick Actions"
+                  alt="Write once, ship anywhere"
                   className="rounded-lg w-full h-auto object-cover border border-stone-200"
                 />
                 <div className="border-t border-stone-100 mt-4 pt-4 -mx-6 px-6">
-                  <p className="text-sm text-stone-500 text-center">Trigger common tasks instantly</p>
+                  <p className="text-sm font-medium text-stone-700 text-center">Write once. Ship anywhere.</p>
+                  <p className="text-sm text-stone-500 text-center mt-1">Jot down a thought, then send it to Linear, Slack, or AI Chat without copy-pasting.</p>
                 </div>
               </div>
               <div className="relative bg-white rounded-md p-6 shadow-xs border border-stone-100">
@@ -173,11 +174,12 @@ export default function App() {
                 </div>
                 <img
                   src="/product-image-2.png"
-                  alt="File Conversion"
+                  alt="AI that knows your tools"
                   className="rounded-lg w-full h-auto object-cover border border-stone-200"
                 />
                 <div className="border-t border-stone-100 mt-4 pt-4 -mx-6 px-6">
-                  <p className="text-sm text-stone-500 text-center">Convert files with drag and drop</p>
+                  <p className="text-sm font-medium text-stone-700 text-center">AI that knows your tools</p>
+                  <p className="text-sm text-stone-500 text-center mt-1">Ask it to find Slack threads, check your Linear tasks, or send a message. It actually does it.</p>
                 </div>
               </div>
               <div className="relative bg-white rounded-md p-6 shadow-xs border border-stone-100">
@@ -186,11 +188,12 @@ export default function App() {
                 </div>
                 <img
                   src="/product-image-3.png"
-                  alt="Automation"
+                  alt="Sketch ideas fast"
                   className="rounded-lg w-full h-auto object-cover border border-stone-200"
                 />
                 <div className="border-t border-stone-100 mt-4 pt-4 -mx-6 px-6">
-                  <p className="text-sm text-stone-500 text-center">Automate repetitive workflows</p>
+                  <p className="text-sm font-medium text-stone-700 text-center">Sketch ideas fast</p>
+                  <p className="text-sm text-stone-500 text-center mt-1">Quick drawings when you need to think visually. No app switching.</p>
                 </div>
               </div>
               <div className="relative bg-white rounded-md p-6 shadow-xs border border-stone-100">
@@ -199,11 +202,12 @@ export default function App() {
                 </div>
                 <img
                   src="/product-image-4.png"
-                  alt="Privacy First"
+                  alt="Your issues, searchable"
                   className="rounded-lg w-full h-auto object-cover border border-stone-200"
                 />
                 <div className="border-t border-stone-100 mt-4 pt-4 -mx-6 px-6">
-                  <p className="text-sm text-stone-500 text-center">Everything runs locally on your device</p>
+                  <p className="text-sm font-medium text-stone-700 text-center">Your issues, searchable</p>
+                  <p className="text-sm text-stone-500 text-center mt-1">Linear tickets at your fingertips. Search by ID, title, or description.</p>
                 </div>
               </div>
             </div>
@@ -222,43 +226,43 @@ export default function App() {
 
         <section className="py-16 px-8">
           <h2 className="text-2xl font-semibold text-stone-800 text-center mb-8">
-            and more...
+            How it works
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex flex-col items-center text-center p-6 rounded-md bg-white shadow-sm">
-              <Zap className="text-stone-700 mb-3" size={28} />
+              <Command className="text-stone-700 mb-3" size={28} />
               <h3 className="text-base font-medium text-stone-800 mb-1">
-                Quick Actions
+                Command Palette
               </h3>
               <p className="text-sm text-stone-500">
-                Trigger common tasks with keyboard shortcuts
+                Type /slack, /issues, /calendar—everything one keystroke away
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-md bg-white shadow-sm">
-              <Layers className="text-stone-700 mb-3" size={28} />
+              <Link className="text-stone-700 mb-3" size={28} />
               <h3 className="text-base font-medium text-stone-800 mb-1">
-                File Conversion
+                Connected Tools
               </h3>
               <p className="text-sm text-stone-500">
-                Convert between formats with drag and drop
+                Notes become tickets. Threads become follow-ups. Tools talk to each other.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-md bg-white shadow-sm">
-              <Clock className="text-stone-700 mb-3" size={28} />
+              <Bot className="text-stone-700 mb-3" size={28} />
               <h3 className="text-base font-medium text-stone-800 mb-1">
-                Automation
+                AI That Acts
               </h3>
               <p className="text-sm text-stone-500">
-                Schedule and automate repetitive workflows
+                Not just answers—actions. Schedule meetings, create issues, send messages.
               </p>
             </div>
             <div className="flex flex-col items-center text-center p-6 rounded-md bg-white shadow-sm">
-              <Shield className="text-stone-700 mb-3" size={28} />
+              <Keyboard className="text-stone-700 mb-3" size={28} />
               <h3 className="text-base font-medium text-stone-800 mb-1">
-                Privacy First
+                Keyboard-First
               </h3>
               <p className="text-sm text-stone-500">
-                All processing happens locally on your device
+                Arrow keys, enter, escape. Mouse optional.
               </p>
             </div>
           </div>
