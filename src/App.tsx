@@ -101,8 +101,7 @@ export default function App() {
               for Professionals
             </h1>
             <p className="mt-4 text-lg text-stone-600 text-center max-w-xl mx-auto tracking-tight">
-              One hotkey. Everything you need. Type a command—your notes, issues,
-              messages, calendar, all right there.
+              One hotkey. All your tools. Stop hopping, start doing.
             </p>
             <button
               onClick={handleDownload}
