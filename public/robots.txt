@@ -1,0 +1,9 @@
+# robots.txt for trygetout.app
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trygetout.app/sitemap.xml
+
+# Disallow admin/internal paths
+Disallow: /download/
