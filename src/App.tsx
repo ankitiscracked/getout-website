@@ -27,19 +27,13 @@ export default function App() {
     return <TermsOfService />;
   }
 
-  // The DMG file URL - replace with your actual storage location
-  // Options: GitHub Releases, Cloudflare R2, or any public CDN
-  const DMG_URL = "/download/releases/Getout-0.1.0-macos.dmg";
+  // Download URL - automatically redirects to the latest release
+  const DMG_URL = "/download/latest";
 
   const heroImage = "/hero.jpg";
 
   const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = DMG_URL;
-    link.download = "Getout-0.1.0-macos.dmg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.location.href = DMG_URL;
   };
 
   return (
