@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import Logo from "./Logo";
 
 interface LegalLayoutProps {
@@ -7,6 +7,13 @@ interface LegalLayoutProps {
 }
 
 export default function LegalLayout({ title, children }: LegalLayoutProps) {
+  useEffect(() => {
+    document.title = `${title} - Getout`;
+    return () => {
+      document.title = "Getout - A Multitool for Professionals";
+    };
+  }, [title]);
+
   return (
     <div className="min-h-screen bg-white px-4 text-stone-800">
       <header className="mx-auto flex max-w-3xl items-center gap-3 pt-6">
