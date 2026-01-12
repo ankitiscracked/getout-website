@@ -84,6 +84,11 @@ export default function PrivacyPolicy() {
           or to serve personalized ads.
         </p>
         <p>
+          We do not retain, use, or transfer Google user data obtained through
+          Google Workspace APIs to develop, improve, or train generalized or
+          non-personalized artificial intelligence or machine learning models.
+        </p>
+        <p>
           You can revoke Getout's access to your Google data at any time via your{" "}
           <a
             href="https://myaccount.google.com/connections"
@@ -106,6 +111,18 @@ export default function PrivacyPolicy() {
           operate the Service (including AI and infrastructure providers), with
           third-party integrations you connect when you request data or actions,
           or if required by law.
+        </p>
+      </section>
+
+      <section className="space-y-2">
+        <h2 className="text-xl font-semibold text-stone-800">Data security</h2>
+        <p>
+          We implement technical and organizational measures to protect your
+          data against unauthorized access, alteration, disclosure, or
+          destruction. These measures include encryption of data in transit
+          using TLS, encryption of sensitive data at rest, secure storage of
+          credentials and tokens, access controls limiting data access to
+          authorized personnel, and regular security reviews of our systems.
         </p>
       </section>
 
