@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
         <p>
           We collect information you provide (such as emails you send to support
           and content you submit in the app), information from integrations you
-          connect (such as Slack, Linear, Gmail, GitHub, or Google Calendar), and
+          connect (such as Slack, Linear, GitHub, or Google Calendar), and
           standard log data from your browser or device (such as IP address,
           device type, and pages visited) to keep the Service secure and
           functioning.
@@ -59,12 +59,53 @@ export default function PrivacyPolicy() {
       </section>
 
       <section className="space-y-2">
+        <h2 className="text-xl font-semibold text-stone-800">Google user data</h2>
+        <p>
+          When you connect Google Calendar, we access your calendar events to
+          display your schedule and allow you to create or edit events within the
+          app. We also access your Google Contacts to suggest attendees when
+          creating calendar events. This data is used solely to provide these
+          user-facing features in the app.
+        </p>
+        <p>
+          Our use of Google user data complies with the{" "}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-600 underline"
+          >
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements. We do not use Google user
+          data for advertising, do not sell or transfer it to third parties for
+          advertising or any other purpose unrelated to the app's core
+          functionality, and do not use it to build user profiles for advertising
+          or to serve personalized ads.
+        </p>
+        <p>
+          You can revoke Getout's access to your Google data at any time via your{" "}
+          <a
+            href="https://myaccount.google.com/connections"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-600 underline"
+          >
+            Google Account settings
+          </a>
+          .
+        </p>
+      </section>
+
+      <section className="space-y-2">
         <h2 className="text-xl font-semibold text-stone-800">Sharing</h2>
         <p>
-          We do not sell your personal information. We may share information with
-          service providers that help us operate the Service (including AI and
-          infrastructure providers), with third-party integrations you connect
-          when you request data or actions, or if required by law.
+          We do not sell your personal information. We do not transfer personal
+          information to third parties for advertising purposes or to data
+          brokers. We may share information with service providers that help us
+          operate the Service (including AI and infrastructure providers), with
+          third-party integrations you connect when you request data or actions,
+          or if required by law.
         </p>
       </section>
 
