@@ -75,14 +75,13 @@ export default function App() {
               A{" "}
               <span className="inline-flex items-center gap-1 sm:gap-2 bg-stone-100 px-2 py-0.5 sm:px-4 sm:py-1 rounded-full">
                 <svg
-                  className="w-6 h-6 sm:w-9 sm:h-9"
+                  className="w-6 h-6 sm:w-9 sm:h-9 text-stone-600"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-stone-600"
                 >
                   <rect x="3" y="8" width="14" height="8" rx="4" />
                   <path d="M17 10l4-4" />
