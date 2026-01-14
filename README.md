@@ -6,23 +6,23 @@ Public landing page for the Getout desktop application, hosted on Cloudflare Wor
 
 1. **Install dependencies**
    ```bash
-   npm install
+   bun install
    ```
 
 2. **Development**
    ```bash
-   npm run dev
+   bun run dev
    ```
    Vite will serve on `http://localhost:5173`
 
 3. **Build**
    ```bash
-   npm run build
+   bun run build
    ```
    Creates optimized build in `dist/`
 
 4. **Deployment to Cloudflare Workers**
-   
+
    First, configure your domain in `wrangler.toml`:
    ```toml
    [env.production]
@@ -30,10 +30,10 @@ Public landing page for the Getout desktop application, hosted on Cloudflare Wor
      { pattern = "yourdomain.com/*", zone_name = "yourdomain.com" }
    ]
    ```
-   
+
    Then deploy:
    ```bash
-   npm run deploy
+   bun run deploy
    ```
 
 ## Configuration

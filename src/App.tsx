@@ -41,42 +41,41 @@ export default function App() {
       {/* Main content wrapper with vertical lines */}
       <div className="relative max-w-5xl mx-auto w-full px-4">
         {/* Left vertical line */}
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-stone-200" />
+        <div className="hidden sm:block absolute left-4 top-0 bottom-0 w-px bg-stone-200" />
         {/* Right vertical line */}
-        <div className="absolute right-4 top-0 bottom-0 w-px bg-stone-200" />
+        <div className="hidden sm:block absolute right-4 top-0 bottom-0 w-px bg-stone-200" />
 
-        <div className="py-10 px-8">
-          <div className="flex items-center gap-4 mx-auto w-fit">
-            <div className="h-16 w-16">
+        <div className="py-6 px-4 sm:py-10 sm:px-8">
+          <div className="flex items-center gap-3 sm:gap-4 mx-auto w-fit">
+            <div className="h-12 w-12 sm:h-16 sm:w-16">
               <Logo />
             </div>
-            <span className="text-2xl font-bold text-[--color-main]">Getout</span>
+            <span className="text-xl sm:text-2xl font-bold text-[--color-main]">Getout</span>
             <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600">
               Beta
             </span>
           </div>
 
           {/* Hero section with diagonal crosses */}
-          <div className="relative mt-12 py-10 -mx-8">
+          <div className="relative mt-8 sm:mt-12 py-6 sm:py-10 -mx-4 sm:-mx-8">
             {/* Top horizontal line */}
             <div className="absolute top-0 left-0 right-0 h-px bg-stone-200" />
             {/* Bottom horizontal line */}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-stone-200" />
             {/* Top-left cross */}
-            <div className="absolute -top-2.5 -left-2.5">
+            <div className="hidden sm:block absolute -top-2.5 -left-2.5">
               <Cross className="text-stone-400" />
             </div>
             {/* Bottom-right cross */}
-            <div className="absolute -bottom-2.5 -right-2.5">
+            <div className="hidden sm:block absolute -bottom-2.5 -right-2.5">
               <Cross className="text-stone-400" />
             </div>
 
-            <h1 className="text-5xl text-stone-800 text-center tracking-[-0.125rem] font-medium">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-stone-800 text-center tracking-[-0.125rem] font-medium">
               A{" "}
-              <span className="inline-flex items-center gap-2 bg-stone-100 px-4 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1 sm:gap-2 bg-stone-100 px-2 py-0.5 sm:px-4 sm:py-1 rounded-full">
                 <svg
-                  width="36"
-                  height="36"
+                  className="w-6 h-6 sm:w-9 sm:h-9"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -99,14 +98,14 @@ export default function App() {
             </p>
             <button
               onClick={handleDownload}
-              className="mt-8 mx-auto flex items-center gap-2 rounded-full bg-stone-800 px-6 py-3 font-semibold text-white shadow-lg hover:bg-stone-700 transition-colors tracking-tight cursor-pointer"
+              className="mt-6 sm:mt-8 mx-auto flex items-center gap-2 rounded-full bg-stone-800 px-5 py-2.5 sm:px-6 sm:py-3 font-semibold text-white shadow-lg hover:bg-stone-700 active:bg-stone-900 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 transition-all tracking-tight cursor-pointer"
             >
               <Download size={20} />
               Download for Mac
             </button>
           </div>
 
-          <div className="relative mb-8 flex items-center justify-center mx-auto rounded-lg mt-16 overflow-hidden p-12 w-full min-h-[36rem]">
+          <div className="relative mb-8 flex items-center justify-center mx-auto rounded-lg mt-10 sm:mt-16 overflow-hidden p-4 sm:p-8 lg:p-12 w-full min-h-[20rem] sm:min-h-[28rem] lg:min-h-[36rem]">
             <div
               className="absolute inset-0"
               style={{
@@ -119,13 +118,13 @@ export default function App() {
             <img
               src="/app.jpeg"
               alt="App"
-              className="relative z-10 w-[85%] rounded-lg shadow-lg"
+              className="relative z-10 w-full sm:w-[90%] lg:w-[85%] rounded-lg shadow-lg"
             />
           </div>
 
-          <div className="mb-12 mx-auto max-w-md rounded-lg bg-white/50 px-4 py-3 text-sm text-stone-400 text-center">
+          <div className="mb-8 sm:mb-12 mx-auto max-w-sm sm:max-w-md rounded-lg bg-white/50 px-3 sm:px-4 py-3 text-sm text-stone-400 text-center">
             <p>After moving to Applications, run:</p>
-            <code className="mt-1 block font-mono bg-white px-2 py-1 rounded text-stone-500">
+            <code className="mt-1 block font-mono bg-white px-2 py-1 rounded text-stone-500 text-xs sm:text-sm break-all sm:break-normal">
               xattr -cr /Applications/Getout.app
             </code>
           </div>
@@ -133,17 +132,17 @@ export default function App() {
 
         {/* Section divider with crosses */}
         <div className="relative h-px bg-stone-200">
-          <div className="absolute left-0 -top-2.5 -translate-x-1/2">
+          <div className="hidden sm:block absolute left-0 -top-2.5 -translate-x-1/2">
             <Cross className="text-stone-400" />
           </div>
-          <div className="absolute right-0 -top-2.5 translate-x-1/2">
+          <div className="hidden sm:block absolute right-0 -top-2.5 translate-x-1/2">
             <Cross className="text-stone-400" />
           </div>
         </div>
 
-        <section className="py-16 px-8">
-          <div className="mx-auto w-[75%]">
-            <h2 className="text-2xl font-semibold text-stone-800 text-center mb-8">
+        <section className="py-10 px-4 sm:py-16 sm:px-8">
+          <div className="mx-auto w-full sm:w-[85%] lg:w-[75%]">
+            <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 text-center mb-6 sm:mb-8">
               See it in action
             </h2>
             <div className="flex flex-col gap-10">
@@ -209,16 +208,16 @@ export default function App() {
 
         {/* Section divider with crosses */}
         <div className="relative h-px bg-stone-200">
-          <div className="absolute left-0 -top-2.5 -translate-x-1/2">
+          <div className="hidden sm:block absolute left-0 -top-2.5 -translate-x-1/2">
             <Cross className="text-stone-400" />
           </div>
-          <div className="absolute right-0 -top-2.5 translate-x-1/2">
+          <div className="hidden sm:block absolute right-0 -top-2.5 translate-x-1/2">
             <Cross className="text-stone-400" />
           </div>
         </div>
 
-        <section className="py-16 px-8">
-          <h2 className="text-2xl font-semibold text-stone-800 text-center mb-8">
+        <section className="py-10 px-4 sm:py-16 sm:px-8">
+          <h2 className="text-xl sm:text-2xl font-semibold text-stone-800 text-center mb-6 sm:mb-8">
             How it works
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -264,12 +263,12 @@ export default function App() {
       </div>
 
       <footer className="mt-auto w-full bg-stone-100 border-t border-stone-200">
-        <div className="mx-auto py-8 flex flex-col items-center gap-4 text-sm text-stone-500">
-          <div className="flex items-center gap-6">
+        <div className="mx-auto py-6 sm:py-8 flex flex-col items-center gap-3 sm:gap-4 text-sm text-stone-500 px-4">
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-6">
             <span className="text-stone-400">Contact:</span>
             <a
               href="mailto:support@trygetout.app"
-              className="hover:text-stone-700"
+              className="hover:text-stone-700 active:text-stone-800"
             >
               support@trygetout.app
             </a>
@@ -277,16 +276,16 @@ export default function App() {
               href="https://twitter.com/ankitiscracked"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-stone-700"
+              className="hover:text-stone-700 active:text-stone-800"
             >
               @ankitiscracked
             </a>
           </div>
-          <div className="flex gap-6">
-            <a href="/privacy" className="hover:text-stone-700">
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-6">
+            <a href="/privacy" className="hover:text-stone-700 active:text-stone-800">
               Privacy Policy
             </a>
-            <a href="/terms" className="hover:text-stone-700">
+            <a href="/terms" className="hover:text-stone-700 active:text-stone-800">
               Terms of Service
             </a>
           </div>
